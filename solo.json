@@ -1,4 +1,19 @@
 {
-
-  "run_list": ["apt", "build-essential", "berkshelf" ]
+  "apt": {
+    "mirror": "us-east-1.ec2"
+  },
+  "mysql" : {
+    "bind_address": "0.0.0.0"
+  },
+  "wercker-mysql" : {
+    "host": "%",
+    "username": "wercker",
+    "password": "wercker"
+  },
+  "run_list": [
+    "recipe[apt]",
+    "recipe[mysql::server]",
+    "recipe[wercker-mysql::create_wercker_user]",
+    "recipe[wercker-mysql::create_wercker_database]"
+  ]
 }
