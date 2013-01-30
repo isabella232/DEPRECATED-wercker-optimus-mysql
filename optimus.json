@@ -1,17 +1,20 @@
 {
 	"name" : "mysql",
 	"version" : "0.0.1",
-	"stackInfo" :
-  	{
-      "stackVersions" : ["0.0.0"],
-      "defaultVersion" : "0.0.0",
-      "versionMapping": [
-          {"0" : "0.0.0"}
-      ]
-  	},
+  "stackInfo" :{},
   "isPrivate" : false,
-  "mainDetect" : [ {"files" : ["optimus.json"]}],
+  "mainDetect" : [],
   "supportDetect" : [],
   "packageIgnore" : [],
+  "environmentVariables" : [
+    {"WERCKER_MYSQL_USERNAME":"wercker"},
+    {"WERCKER_MYSQL_PASSWORD":"wercker"},
+    {"WERCKER_MYSQL_PORT":"3306"},
+    {"WERCKER_MYSQL_DATABASE":"werckerdb1"},
+    {"WERCKER_MYSQL_URL":"mysql://wercker:wercker@$$HOST$$:3306/werckerdb1"}],
   "priority" : 1000
 }
+
+
+
+
