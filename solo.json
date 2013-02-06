@@ -3,7 +3,13 @@
     "mirror": "us-east-1.ec2"
   },
   "mysql" : {
-    "bind_address": "0.0.0.0"
+    "bind_address": "0.0.0.0",
+    "server_debian_password" : "wercker",
+    "server_root_password" : "wercker",
+    "server_repl_password" : "wercker",
+    "tunable" : {
+      "slow_query_log" : "false"
+    }
   },
   "wercker-mysql" : {
     "host": "%",
