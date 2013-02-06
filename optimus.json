@@ -14,7 +14,6 @@
     {"WERCKER_MYSQL_URL":"mysql://wercker:wercker@$$HOST$$:3306/werckerdb1"}],
   "priority" : 1000,
   "startUp" : [
-    "sudo stop mysql",
     "sudo mkdir /tmp/ramdisk",
     "sudo mount -t tmpfs -o size=256M tmpfs /tmp/ramdisk/",
     "sudo mv /var/lib/mysql /tmp/ramdisk/mysql",
