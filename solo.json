@@ -19,6 +19,7 @@
   "run_list": [
     "recipe[apt]",
     "recipe[mysql::server]",
+    "recipe[wercker-mysql::use_ramdisk]",
     "recipe[wercker-mysql::create_wercker_user]",
     "recipe[wercker-mysql::create_wercker_database]"
   ]
